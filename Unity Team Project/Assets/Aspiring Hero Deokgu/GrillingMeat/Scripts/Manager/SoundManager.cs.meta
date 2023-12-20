@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 4e4e32243b6004c42aacdba1dc35b99d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gameStartSound: {instanceID: 0}
+  - gameClearSound: {instanceID: 0}
+  - gameOverSound: {instanceID: 0}
+  - optionSound: {instanceID: 0}
+  - timeSound: {instanceID: 0}
+  - timeOverSound: {instanceID: 0}
+  - meatCatchSound: {instanceID: 0}
+  - meatGrillSound: {fileID: 8300000, guid: 75860834ea6517944a1172d9c9f9c701, type: 3}
+  - eatSound: {fileID: 8300000, guid: e95b2678c6d5a5f49bde3f28b0343041, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

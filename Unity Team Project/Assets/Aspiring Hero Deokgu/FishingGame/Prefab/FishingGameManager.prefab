@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2425150638303758527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1823646821680381212}
+  - component: {fileID: 6184184911934498012}
+  - component: {fileID: 7757397010796884110}
+  m_Layer: 0
+  m_Name: FishingGameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1823646821680381212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2425150638303758527}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 172.83514, y: -18.00383, z: 51.198734}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6184184911934498012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2425150638303758527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5743389fca9a0764c848c8687b71205c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredPresses: 30
+  HitqteSlider: {fileID: 0}
+  qtePanel: {fileID: 0}
+--- !u!114 &7757397010796884110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2425150638303758527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a967d7a1b41e77649996c5e5023d2468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinigamePanel: {fileID: 0}
+  topPivot: {fileID: 0}
+  bottomPivot: {fileID: 0}
+  fish: {fileID: 0}
+  fishTimer: 0
+  timerMultiplicator: 3
+  smoothMotion: 1
+  hook: {fileID: 0}
+  hookPosition: 0
+  hookSize: 0.4
+  hookPower: 5
+  hookPullVelocity: 0
+  hookPullPower: 0.01
+  hookGravityPower: 0.005
+  hookProgressDegradationPower: 0.1
+  progressBarContainer: {fileID: 0}
+  fishingfalse: 0
+  failTimer: 10
