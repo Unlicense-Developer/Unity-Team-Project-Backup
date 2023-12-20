@@ -7,8 +7,10 @@ using UnityEngine.SceneManagement;
 public class LoadingSceneManager : MonoBehaviour
 {
     private string nextScene;
+
     [SerializeField] GameObject loadingSceneUI;
     [SerializeField] Image progressBar;
+    [SerializeField] FadeInOut fade;
 
     public static LoadingSceneManager instance = null;
 
@@ -46,6 +48,7 @@ public class LoadingSceneManager : MonoBehaviour
 
     public void StartLoadScene(string sceneName)
     {
+        //fade.FadeOut();
         nextScene = sceneName;
         StartCoroutine(LoadScene());
     }
@@ -58,7 +61,9 @@ public class LoadingSceneManager : MonoBehaviour
     IEnumerator LoadScene()
     {
         yield return null;
+        //yield return new WaitForSeconds(1.5f);
         loadingSceneUI.SetActive(true);
+
         AsyncOperation op = SceneManager.LoadSceneAsync(nextScene);
         op.allowSceneActivation = false;
         float timer = 0.0f;
@@ -87,4 +92,3 @@ public class LoadingSceneManager : MonoBehaviour
         }
     }
 }
-
