@@ -48,6 +48,11 @@ public class InventoryManager : MonoBehaviour
         inven = PlayerData.instance.GetInvenData();
         gold = PlayerData.instance.GetGold();
     }
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -103,7 +108,7 @@ public class InventoryManager : MonoBehaviour
         //select_Item = ItemDataManager.instance.GetItem(item.transform.Find("Image_item").GetComponent<Image>().sprite.name);
         select_Item = item;
         Debug.Log(select_Item.transform.Find("Image_item").GetComponent<Image>().sprite.name + " º±≈√");
-        sellPriceText.text = (GetSelectItem().value / 2).ToString();
+        sellPriceText.text = GetSelectItem().value.ToString();
         select_Frame.SetActive(true);
     }
 

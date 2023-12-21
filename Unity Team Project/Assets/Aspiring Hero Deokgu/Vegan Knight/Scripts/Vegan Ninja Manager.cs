@@ -134,8 +134,8 @@ public class VeganNinjaManager : MonoBehaviour
 
     public void ReturnWorldScene()
     {
+        SceneManager.LoadScene("WorldMap");
         Time.timeScale = 1.0f;
-        LoadingSceneManager.instance.StartLoadScene("WorldMap");
     }
 
     private IEnumerator ExplodeSequence()
