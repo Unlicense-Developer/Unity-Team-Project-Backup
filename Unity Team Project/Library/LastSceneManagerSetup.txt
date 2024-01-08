@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/Aspiring Hero Deokgu/Vegan Knight/Scenes/VeganKnightScene.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
