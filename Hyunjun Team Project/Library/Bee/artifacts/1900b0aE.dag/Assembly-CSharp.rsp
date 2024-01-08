@@ -474,6 +474,7 @@
 "Assets/Aspiring Hero Deokgu/UI/Scripts/Achievement Base.cs"
 "Assets/Aspiring Hero Deokgu/UI/Scripts/Achievement Manager.cs"
 "Assets/Aspiring Hero Deokgu/UI/Scripts/AchievementUI.cs"
+"Assets/Aspiring Hero Deokgu/UI/Scripts/Game Settings.cs"
 "Assets/Aspiring Hero Deokgu/UI/Scripts/GameExit.cs"
 "Assets/Aspiring Hero Deokgu/UI/Scripts/Inventory Manager.cs"
 "Assets/Aspiring Hero Deokgu/UI/Scripts/InventoryUI.cs"
