@@ -1,0 +1,622 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.14f1 (eff2de9070d8) revision 15725278'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19042) 64bit Core' Language: 'ko' Physical Memory: 32439 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Hyunjun Github/Unity-Team-Project-Backup/Hyunjun Team Project
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+63287
+Successfully changed project path to: D:/Hyunjun Github/Unity-Team-Project-Backup/Hyunjun Team Project
+D:/Hyunjun Github/Unity-Team-Project-Backup/Hyunjun Team Project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [27592] Host "[IP] 172.16.133.14 [Port] 0 [Flags] 2 [Guid] 3849744370 [EditorId] 3849744370 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-5AO2MO1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [27592] Host "[IP] 172.16.133.14 [Port] 0 [Flags] 2 [Guid] 3849744370 [EditorId] 3849744370 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-5AO2MO1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 3 workers.
+Refreshing native plugins compatible for Editor in 27.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.14f1 (eff2de9070d8)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Hyunjun Github/Unity-Team-Project-Backup/Hyunjun Team Project/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 530 (ID=0x1912)
+    Vendor:   Intel
+    VRAM:     16219 MB
+    Driver:   27.20.100.8935
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56996
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.024592 seconds.
+- Loaded All Assemblies, in  0.697 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.472 seconds
+Domain Reload Profiling: 1165ms
+	BeginReloadAssembly (239ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (62ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (123ms)
+	LoadAllAssembliesAndSetupDomain (249ms)
+		LoadAssemblies (233ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (246ms)
+			TypeCache.Refresh (244ms)
+				TypeCache.ScanAssembly (216ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (473ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (378ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (21ms)
+			SetLoadedEditorAssemblies (14ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (233ms)
+			ProcessInitializeOnLoadMethodAttributes (106ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.346 seconds
+Refreshing native plugins compatible for Editor in 7.81 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.290 seconds
+Domain Reload Profiling: 2631ms
+	BeginReloadAssembly (303ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (63ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (85ms)
+	LoadAllAssembliesAndSetupDomain (872ms)
+		LoadAssemblies (689ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (373ms)
+			TypeCache.Refresh (324ms)
+				TypeCache.ScanAssembly (296ms)
+			ScanForSourceGeneratedMonoScriptInfo (33ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1291ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (979ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (22ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (126ms)
+			ProcessInitializeOnLoadAttributes (767ms)
+			ProcessInitializeOnLoadMethodAttributes (37ms)
+			AfterProcessingInitializeOnLoad (21ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 7.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3874 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (132.5 KB). Loaded Objects now: 4370.
+Memory consumption went from 241.9 MB to 241.7 MB.
+Total: 4.996300 ms (FindLiveObjects: 0.349700 ms CreateObjectMapping: 0.399300 ms MarkObjects: 3.787600 ms  DeleteObjects: 0.458700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2849719.139551 seconds.
+  path: Assets/Aspiring Hero Deokgu/CartDelivery
+  artifactKey: Guid(1e314fa09ad09e946800e525ec0e63ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/CartDelivery using Guid(1e314fa09ad09e946800e525ec0e63ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aa410c55eeee3593cf5aea6e3117ff9') in 0.002813 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Aspiring Hero Deokgu/CartDelivery/Scripts/Manager
+  artifactKey: Guid(9c31fbcc1f8141348a3daf50fa42bf98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/CartDelivery/Scripts/Manager using Guid(9c31fbcc1f8141348a3daf50fa42bf98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77677219e304710e0f0d512f103cf7bb') in 0.000532 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/Aspiring Hero Deokgu/CartDelivery/Scripts
+  artifactKey: Guid(1a3a5d31b0b98ec449f0cca554c5b4d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/CartDelivery/Scripts using Guid(1a3a5d31b0b98ec449f0cca554c5b4d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a31b88e7df45ee4c7879517c4e46762c') in 0.000538 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Aspiring Hero Deokgu/CartDelivery/Scenes
+  artifactKey: Guid(e0442422fa2e6804381c8bb9bfb76104) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/CartDelivery/Scenes using Guid(e0442422fa2e6804381c8bb9bfb76104) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04b16853970bce4dc5237ba3071e0542') in 0.000635 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Aspiring Hero Deokgu/GrillingMeat
+  artifactKey: Guid(b30f72aece439e145b36918addebced9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/GrillingMeat using Guid(b30f72aece439e145b36918addebced9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '007162805784533e7a5af45b929047c4') in 0.000669 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.163967 seconds.
+  path: Assets/Aspiring Hero Deokgu/CartDelivery/Scripts/Manager/Score
+  artifactKey: Guid(4a3870e3fbe7b0b49b5473a1bd1daba6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/CartDelivery/Scripts/Manager/Score using Guid(4a3870e3fbe7b0b49b5473a1bd1daba6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55557993ce7d05d9385fdac29a94124b') in 0.000685 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.619429 seconds.
+  path: Assets/Aspiring Hero Deokgu/CartDelivery/Scripts/Manager/Score/ProductsTriggerSign.cs
+  artifactKey: Guid(5ca2e9d1b0de00a4083d820d9d04651a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/CartDelivery/Scripts/Manager/Score/ProductsTriggerSign.cs using Guid(5ca2e9d1b0de00a4083d820d9d04651a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df91b7bbc02fed234886ecfd309c92be') in 0.000600 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 61.558044 seconds.
+  path: Assets/Aspiring Hero Deokgu/CartDelivery/Scripts/Manager/Score/ScoreManager.cs
+  artifactKey: Guid(ba758e31c8a7cb548b9220f9cbccd265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/CartDelivery/Scripts/Manager/Score/ScoreManager.cs using Guid(ba758e31c8a7cb548b9220f9cbccd265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69b35aaf1abc407be263c85755be51bc') in 0.000651 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 11.016773 seconds.
+  path: Assets/Aspiring Hero Deokgu/CartDelivery/Scripts/Player
+  artifactKey: Guid(34bee86720467e744b678366b3bbfe2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/CartDelivery/Scripts/Player using Guid(34bee86720467e744b678366b3bbfe2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '763915a47f566364c85d14b305bd67e2') in 0.000739 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.965696 seconds.
+  path: Assets/Aspiring Hero Deokgu/CartDelivery/Scripts/Player/Player.cs
+  artifactKey: Guid(712e0b900751dda45aeb2b5a59f0b970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/CartDelivery/Scripts/Player/Player.cs using Guid(712e0b900751dda45aeb2b5a59f0b970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e0a061f4db68da6664bae90026de6c4') in 0.000572 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 192.436456 seconds.
+  path: Assets/Aspiring Hero Deokgu/CartDelivery/Scenes/CartDelivery_240103.unity
+  artifactKey: Guid(2bbad518021352542904d75145aa8bd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/CartDelivery/Scenes/CartDelivery_240103.unity using Guid(2bbad518021352542904d75145aa8bd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f97520ef056a9b9b90a6242d67aa511e') in 0.000667 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 88.376544 seconds.
+  path: Assets/Aspiring Hero Deokgu/Prefabs
+  artifactKey: Guid(593e91717e9c1c940bffc054ba44a7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Prefabs using Guid(593e91717e9c1c940bffc054ba44a7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c17974d28f5035b1cc42ea097b84abb') in 0.000571 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.887411 seconds.
+  path: Assets/Aspiring Hero Deokgu/Scenes
+  artifactKey: Guid(9fda2d57bd470c54fb19200afb6fd8a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Scenes using Guid(9fda2d57bd470c54fb19200afb6fd8a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfefcacb0130c8c565de587b24e8d099') in 0.000630 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.818410 seconds.
+  path: Assets/Aspiring Hero Deokgu/Scenes/WorldMap.unity
+  artifactKey: Guid(7878f3ea3304b0a4893cbcaa16537b81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Scenes/WorldMap.unity using Guid(7878f3ea3304b0a4893cbcaa16537b81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ebfdb5eb1b54690c4bb21f768846217') in 0.000628 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2035.795430 seconds.
+  path: Assets/Aspiring Hero Deokgu/Defence Game/Scripts
+  artifactKey: Guid(31500ec3941eac1439b0b9fd6cd2f51a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Defence Game/Scripts using Guid(31500ec3941eac1439b0b9fd6cd2f51a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b03d82a5be03e1d1345d867cfb5f60f3') in 0.001813 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.338713 seconds.
+  path: Assets/Aspiring Hero Deokgu/Defence Game/Scenes
+  artifactKey: Guid(6d66b31d4c45ca7469bdfeadb837ed26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Defence Game/Scenes using Guid(6d66b31d4c45ca7469bdfeadb837ed26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2030e1431917381fd5a71529c0f0d3cd') in 0.000776 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.783652 seconds.
+  path: Assets/Aspiring Hero Deokgu/Defence Game/Scenes/DefenceGameScene.unity
+  artifactKey: Guid(33d9a8fdb72297c4cbc68d8068324923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Defence Game/Scenes/DefenceGameScene.unity using Guid(33d9a8fdb72297c4cbc68d8068324923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f70ffd07cd15c7fb38856a78bfca1ed6') in 0.001304 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.737 seconds
+Refreshing native plugins compatible for Editor in 5.79 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.631 seconds
+Domain Reload Profiling: 3363ms
+	BeginReloadAssembly (221ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (44ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (404ms)
+		LoadAssemblies (515ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (19ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (2632ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (903ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (23ms)
+			SetLoadedEditorAssemblies (14ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (183ms)
+			ProcessInitializeOnLoadAttributes (591ms)
+			ProcessInitializeOnLoadMethodAttributes (57ms)
+			AfterProcessingInitializeOnLoad (34ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (18ms)
+Refreshing native plugins compatible for Editor in 16.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3843 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 34 unused Assets / (102.8 KB). Loaded Objects now: 4385.
+Memory consumption went from 233.7 MB to 233.6 MB.
+Total: 11.634300 ms (FindLiveObjects: 0.586900 ms CreateObjectMapping: 1.546800 ms MarkObjects: 9.243000 ms  DeleteObjects: 0.253300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.751 seconds
+Refreshing native plugins compatible for Editor in 6.58 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.091 seconds
+Domain Reload Profiling: 3839ms
+	BeginReloadAssembly (224ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (46ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (414ms)
+		LoadAssemblies (529ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (19ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (3094ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1686ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (25ms)
+			SetLoadedEditorAssemblies (12ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (169ms)
+			ProcessInitializeOnLoadAttributes (1386ms)
+			ProcessInitializeOnLoadMethodAttributes (55ms)
+			AfterProcessingInitializeOnLoad (38ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (19ms)
+Refreshing native plugins compatible for Editor in 11.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3844 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 34 unused Assets / (102.8 KB). Loaded Objects now: 4400.
+Memory consumption went from 235.9 MB to 235.8 MB.
+Total: 4.721300 ms (FindLiveObjects: 0.545100 ms CreateObjectMapping: 0.415900 ms MarkObjects: 3.619100 ms  DeleteObjects: 0.138600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 140.435338 seconds.
+  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Fonts/Alata-Regular.ttf
+  artifactKey: Guid(45051d5d816ef4b8d84119f09ef942fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Fonts/Alata-Regular.ttf using Guid(45051d5d816ef4b8d84119f09ef942fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81234a958ea3885df2a6b806c8113896') in 0.177698 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/GUI Kit - Dark Geo/ResourceData/Font/Montserrat-Regular.ttf
+  artifactKey: Guid(4f24e9468e6d2437c824661d6772911c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit - Dark Geo/ResourceData/Font/Montserrat-Regular.ttf using Guid(4f24e9468e6d2437c824661d6772911c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad8cdff180ac7fb870762bd055588168') in 0.043991 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/GUI Kit - Dark Geo/ResourceData/Font/Myriad Pro Regular.ttf
+  artifactKey: Guid(76bb5dbf9547a42599f4dc6fd723b803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit - Dark Geo/ResourceData/Font/Myriad Pro Regular.ttf using Guid(76bb5dbf9547a42599f4dc6fd723b803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6a974ebb54afc3524a0db425d4988c1') in 0.046190 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Fonts/JosefinSans-Bold.ttf
+  artifactKey: Guid(db8d8dc6103114098a190617a8111df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Fonts/JosefinSans-Bold.ttf using Guid(db8d8dc6103114098a190617a8111df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50636c61cbe621987c4f9307be97cc6f') in 0.061679 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Aspiring Hero Deokgu/Alchemy/Fonts/HeirofLightBold.ttf
+  artifactKey: Guid(5398910e70ed9d349a8346d93c4afd27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Alchemy/Fonts/HeirofLightBold.ttf using Guid(5398910e70ed9d349a8346d93c4afd27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a478848f2397d035d7796487b8f23a1b') in 0.030978 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Font/Mabinogi_Classic_TTF.ttf
+  artifactKey: Guid(a211ae0fc2233ef4ea3b5738c0279a4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Font/Mabinogi_Classic_TTF.ttf using Guid(a211ae0fc2233ef4ea3b5738c0279a4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '495ec0fc436a4097223845dec2d6bd9e') in 0.048668 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Aspiring Hero Deokgu/UI/Fonts/DNFBitBitv2.ttf
+  artifactKey: Guid(ae480f4f7a7d6474ebb34ce0b000ebe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/UI/Fonts/DNFBitBitv2.ttf using Guid(ae480f4f7a7d6474ebb34ce0b000ebe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6573e4377490cc9d6e844cdbe7e3d503') in 0.056084 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Aspiring Hero Deokgu/CartDelivery/Textures/UI/Fonts/LiberationSans.ttf
+  artifactKey: Guid(07002ddd27a8fe14aafde103a4a72a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/CartDelivery/Textures/UI/Fonts/LiberationSans.ttf using Guid(07002ddd27a8fe14aafde103a4a72a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a3423fce4f44801d47fdb051693aea9') in 0.059762 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/GUI Kit - Dark Geo/ResourceData/Font/Montserrat-Light.ttf
+  artifactKey: Guid(e4eac00121a5c4e489ed23bbe9ab7abb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit - Dark Geo/ResourceData/Font/Montserrat-Light.ttf using Guid(e4eac00121a5c4e489ed23bbe9ab7abb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a0da57ce4ac026ebb54a1b4a1d7d8b7') in 0.054697 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+  artifactKey: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '868ae7279cb8681e901fb13a12c8cb7e') in 0.058251 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/GUI Kit - Dark Geo/ResourceData/Font/Montserrat-ExtraLight.ttf
+  artifactKey: Guid(d545e565289ed493a971add90113cc18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit - Dark Geo/ResourceData/Font/Montserrat-ExtraLight.ttf using Guid(d545e565289ed493a971add90113cc18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '813a723d30b032dc6f4ba62e5ef789d2') in 0.059776 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000096 seconds.
+  path: Assets/GUI Kit - Dark Geo/ResourceData/Font/Montserrat-Medium.ttf
+  artifactKey: Guid(056f1ad31a4d54771b20f1dad2eaa1e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit - Dark Geo/ResourceData/Font/Montserrat-Medium.ttf using Guid(056f1ad31a4d54771b20f1dad2eaa1e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa01da69ea28eea323b5257d6e58963b') in 0.058024 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/GUI Kit - Dark Geo/ResourceData/Font/Montserrat-Bold.ttf
+  artifactKey: Guid(fd37beb67dd2f4dea9dbde9e63fba504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit - Dark Geo/ResourceData/Font/Montserrat-Bold.ttf using Guid(fd37beb67dd2f4dea9dbde9e63fba504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ecf14f2a26895bde07fa09b5d64c226') in 0.062161 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/GUI Kit - Dark Geo/ResourceData/Font/Montserrat-SemiBold.ttf
+  artifactKey: Guid(a0b51ef8f0abb43aab0e92dd6b5c3d35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit - Dark Geo/ResourceData/Font/Montserrat-SemiBold.ttf using Guid(a0b51ef8f0abb43aab0e92dd6b5c3d35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df9c38af5ac11e6a2d00260f6d3e955e') in 0.063123 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 930.181443 seconds.
+  path: Assets/Aspiring Hero Deokgu/Defence Game/Sounds
+  artifactKey: Guid(2241f7482315bc840a1d4b61dfc3fefd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Defence Game/Sounds using Guid(2241f7482315bc840a1d4b61dfc3fefd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ad08e3485e48b04eed3765bc3801e2a') in 0.001148 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.707132 seconds.
+  path: Assets/Aspiring Hero Deokgu/Defence Game/Prefabs
+  artifactKey: Guid(4d6e0a200815eb24c935ca85b0f7c67a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Defence Game/Prefabs using Guid(4d6e0a200815eb24c935ca85b0f7c67a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2bbd9ef5b769cd3e48c53b28d270b1a') in 0.000877 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 10.226100 seconds.
+  path: Assets/Aspiring Hero Deokgu/Scenes/Game Lighting Settings.lighting
+  artifactKey: Guid(5afc66094afe34244a34399bd0dc91e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Scenes/Game Lighting Settings.lighting using Guid(5afc66094afe34244a34399bd0dc91e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42481516cead2d160f00856c1acf3242') in 0.002836 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.527187 seconds.
+  path: Assets/Aspiring Hero Deokgu/Scenes/WorldMap.unity
+  artifactKey: Guid(7878f3ea3304b0a4893cbcaa16537b81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Scenes/WorldMap.unity using Guid(7878f3ea3304b0a4893cbcaa16537b81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '723714082746e78d469810946fccd3da') in 0.000680 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 192.403745 seconds.
+  path: Assets/Aspiring Hero Deokgu/Scenes/Title.unity
+  artifactKey: Guid(b5361718909b88044ac2ba9702f5d58f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Scenes/Title.unity using Guid(b5361718909b88044ac2ba9702f5d58f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b9bac07d27ba89506cb28cbfeb74a2b') in 0.002105 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1723.671317 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon
+  artifactKey: Guid(b29fe5c09c53ed94e8117720ac12cc7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon using Guid(b29fe5c09c53ed94e8117720ac12cc7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '164b435eaa624d3dca3cc55b26390f97') in 0.001073 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.774771 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Script
+  artifactKey: Guid(963a7e4c02060f040858633952801125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Script using Guid(963a7e4c02060f040858633952801125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3dc2d34576a8efcacc8f6ebca4adb60') in 0.000620 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.453012 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Script/ButtonManager.cs
+  artifactKey: Guid(f1793ff64529dc64f806b9ea01864fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Script/ButtonManager.cs using Guid(f1793ff64529dc64f806b9ea01864fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40af47ae20e2a689c809d5ed5827f3d0') in 0.000775 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0

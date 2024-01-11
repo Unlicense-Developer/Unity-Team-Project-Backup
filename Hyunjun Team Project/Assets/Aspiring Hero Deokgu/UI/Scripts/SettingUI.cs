@@ -8,7 +8,7 @@ public class SettingUI : MonoBehaviour
     GameObject settingPanel;
     void Start()
     {
-        settingPanel.SetActive(false);
+        //settingPanel.SetActive(false);
     }
     public void Onsetting()//인벤토리 버튼으로 열기 
     {
