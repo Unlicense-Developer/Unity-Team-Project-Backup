@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using WindowsInput;
 
 public class AchievementUI : MonoBehaviour
@@ -15,9 +14,6 @@ public class AchievementUI : MonoBehaviour
     }
     void ToggleAchievement() //인벤토리 열기,닫기
     {
-        if (SceneManager.GetActiveScene().name != "WorldMap")
-            return;
-
         if (WinInput.GetKeyDown(KeyCode.J))
         {
             uiPanel.SetActive(!uiPanel.activeSelf);

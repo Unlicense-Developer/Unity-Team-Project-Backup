@@ -15,7 +15,6 @@ public class DefenceGameManager : MonoBehaviour
 
     public PlayerLife playerLife;
 
-    int orcScore = 0;
     int score = 0;
     int life = 5;
     bool isPlaying = false;
@@ -37,6 +36,7 @@ public class DefenceGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        WorldSoundManager.Instance.PlayBGM("DefenceGame Start Menu BGM");
         playerLife = GetComponent<PlayerLife>();
     }
 
@@ -84,11 +84,12 @@ public class DefenceGameManager : MonoBehaviour
         gameStartUI.SetActive(false);
         Camera.main.transform.rotation = Quaternion.Euler(new Vector3(50.0f, 90.0f, 0.0f));
         Cursor.lockState = CursorLockMode.Locked;
+        WorldSoundManager.Instance.PlayBGM("DefenceGame Battle BGM");
     }
 
     void CheckGameOver()
     {
-        if (life <= 0 && isPlaying)
+        if (life <= 0)
         {
             isPlaying = false;
             Cursor.lockState = CursorLockMode.None;
@@ -102,7 +103,7 @@ public class DefenceGameManager : MonoBehaviour
     public void ReturnWorldScene()
     {
         PlayerData.instance.SetGold((int)(score * 0.5f));
+        PlayerData.instance.AddItemData("Ax");
         LoadingSceneManager.Instance.StartLoadScene("WorldMap");
-        Time.timeScale = 1.0f;
     }
 }

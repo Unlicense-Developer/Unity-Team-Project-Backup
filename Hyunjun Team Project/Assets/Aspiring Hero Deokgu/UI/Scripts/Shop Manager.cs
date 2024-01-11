@@ -96,6 +96,6 @@ public class ShopManager : MonoBehaviour
 
         InventoryManager.Instance.AddItem(select_Shopitem);
         InventoryManager.Instance.UpdateInven();
-        InventoryManager.Instance.SetGold(-GetSelectItem().value);
+        InventoryManager.Instance.AddGold(-GetSelectItem().value);
     }
 }

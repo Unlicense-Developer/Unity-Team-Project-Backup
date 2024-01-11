@@ -23,6 +23,7 @@ public class AchievementBase : MonoBehaviour
     {
         rewardGoldUI = transform.Find("Button_Reward_Coin").gameObject;
         aquiredGoldUI = transform.Find("Button_Acquired").gameObject;
+        //sliderBar = transform.Find("SliderBar").GetComponent<Slider>();
     }
 
     // Update is called once per frame
@@ -62,10 +63,7 @@ public class AchievementBase : MonoBehaviour
 
     public void SetAchieveValue(int value)
     {
-        if (achieve_Value == achieve_MaxValue)
-            return;
-
-        achieve_Value += value;
+        achieve_Value = value;
         UpdateAchievement();
 
         if (achieve_Value == achieve_MaxValue)

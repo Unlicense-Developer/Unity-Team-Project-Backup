@@ -6,12 +6,11 @@ using TMPro;
 
 public class AchievementManager : MonoBehaviour
 {
-    [SerializeField] private AchievementBase achieve_Defence;
-    [SerializeField] private AchievementBase achieve_Alchemy;
-    [SerializeField] private AchievementBase achieve_GrillingMeat;
     [SerializeField] private AchievementBase achieve_VeganKnight;
-    [SerializeField] private AchievementBase achieve_Delivery;
-    [SerializeField] private AchievementBase achieve_Fishing;
+    [SerializeField] private AchievementBase achieve_Alchemy;
+    [SerializeField] private AchievementBase achieve_Defence;
+    [SerializeField] private AchievementBase achieve_GrillingMeat;
+    [SerializeField] private AchievementBase achieve_Dungeon;
     
 
     public static AchievementManager Instance { get; private set; }
@@ -34,12 +33,11 @@ public class AchievementManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        achieve_Defence.InitAchievement(3, 3000);
-        achieve_Alchemy.InitAchievement(1, 2000);
-        achieve_GrillingMeat.InitAchievement(1, 1500);
         achieve_VeganKnight.InitAchievement(1, 1000);
-        achieve_Delivery.InitAchievement(500, 2000);
-        achieve_Fishing.InitAchievement(1, 3000);
+        achieve_Alchemy.InitAchievement(1, 2000);
+        achieve_Defence.InitAchievement(3, 5000);
+        achieve_GrillingMeat.InitAchievement(1, 1500);
+        achieve_Dungeon.InitAchievement(1, 10000);
     }
         
     // Update is called once per frame
@@ -67,13 +65,9 @@ public class AchievementManager : MonoBehaviour
         {
             achieve_Defence.SetAchieveValue(value);
         }
-        else if (gameName == "Delivery")
+        else if (gameName == "Dungeon")
         {
-            achieve_Delivery.SetAchieveValue(value);
-        }
-        else if (gameName == "Fishing")
-        {
-            achieve_Fishing.SetAchieveValue(value);
+            achieve_Dungeon.SetAchieveValue(value);
         }
 
     }

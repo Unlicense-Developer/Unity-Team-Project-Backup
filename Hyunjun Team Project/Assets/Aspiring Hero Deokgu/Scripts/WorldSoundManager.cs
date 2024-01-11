@@ -88,6 +88,10 @@ public class WorldSoundManager : MonoBehaviour
             Debug.LogError("BGM not found: " + name);
         }
     }
+    public void StopBGM()
+    {
+        bgmSource.Stop();
+    }
 
     public void StartCityBGM()
     {

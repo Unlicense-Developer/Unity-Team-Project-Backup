@@ -95,7 +95,12 @@ public class InventoryManager : MonoBehaviour
 
     public void SetGold(int setGold)
     {
-        gold += setGold;
+        gold = setGold;
+    }
+
+    public void AddGold(int addGold)
+    {
+        gold += addGold;
     }
 
     public void UpdateInven()

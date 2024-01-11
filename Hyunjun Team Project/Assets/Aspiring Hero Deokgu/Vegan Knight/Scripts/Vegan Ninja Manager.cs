@@ -49,6 +49,7 @@ public class VeganNinjaManager : MonoBehaviour
         sliceSound = GetComponent<AudioSource>();
 
         gameStartUI.SetActive(true);
+        WorldSoundManager.Instance.PlayBGM("VeganKnight Start Menu BGM");
     }
 
     private void Update()

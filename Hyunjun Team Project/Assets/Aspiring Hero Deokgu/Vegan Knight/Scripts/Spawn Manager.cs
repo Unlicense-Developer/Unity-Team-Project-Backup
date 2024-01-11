@@ -34,6 +34,7 @@ public class SpawnManager: MonoBehaviour
     public void StartSpawn()
     {
         spawnSound.Play();
+        WorldSoundManager.Instance.StopBGM();
         StartCoroutine(Spawn());
     }
 
