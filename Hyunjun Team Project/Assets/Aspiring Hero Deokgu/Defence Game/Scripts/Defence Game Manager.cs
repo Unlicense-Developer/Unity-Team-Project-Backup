@@ -102,8 +102,7 @@ public class DefenceGameManager : MonoBehaviour
 
     public void ReturnWorldScene()
     {
-        PlayerData.instance.SetGold((int)(score * 0.5f));
-        PlayerData.instance.AddItemData("Ax");
+        PlayerData.Instance.SetGold((int)(score * 0.5f));
         LoadingSceneManager.Instance.StartLoadScene("WorldMap");
     }
 }

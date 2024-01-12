@@ -6,11 +6,11 @@ public class SaveLoadPlayerData : MonoBehaviour
 {
     void Start()
     {
-        PlayerData.instance.LoadPlayerTransform(gameObject);
+        PlayerData.Instance.LoadPlayerTransform(gameObject);
     }
 
     void OnDestroy()
     {
-        PlayerData.instance.SavePlayerTransform(gameObject.transform.position, gameObject.transform.rotation);
+        PlayerData.Instance.SavePlayerTransform(gameObject.transform.position, gameObject.transform.rotation);
     }
 }

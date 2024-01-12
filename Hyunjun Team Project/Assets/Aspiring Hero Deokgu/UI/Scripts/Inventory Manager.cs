@@ -170,6 +170,31 @@ public class InventoryManager : MonoBehaviour
         DeleteSelectItem();
     }
 
+    // 인벤토리에 특정 아이템이 존재하는지 확인하는 메서드
+    public bool HasItem(string itemName)
+    {
+        foreach (Item item in inven)
+        {
+            if (item.name == itemName)
+                return true;
+        }
+        return false;
+    }
+
+    // 인벤토리 내의 모든 아이템을 반환하는 메서드
+    public List<Item> GetItems()
+    {
+        return new List<Item>(inven);
+    }
+
+    // 인벤토리 아이템 목록을 설정하는 메서드
+    public void SetItems(List<Item> items)
+    {
+        inven = new List<Item>(items);
+        UpdateInven(); // 인벤토리 UI 업데이트
+    }
+
+    // 인벤토리 아이템 갯수 체크 메서드
     public int GetItemCount(string itemName)
     {
         int count = 0;

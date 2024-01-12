@@ -25,6 +25,8 @@ public class AudioManager : MonoBehaviour
     }
 
     public void PlaySFX(string p_sfxName)
+
+
     {   // 입력받은 이름의 효과음을 찾아서 재생
         for (int i = 0; i < sfx.Length; i++)
         {

@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-D:\Unity\Projects\Unity Team Project
-=======
-D:\Unity\Projects\Unity Team Project Develope 0.4
->>>>>>> b7b977f8ad9d098a05999a83cf303d3b19cfa4ac
+D:\Unity\Projects\Unity Team Project Develop 0.7

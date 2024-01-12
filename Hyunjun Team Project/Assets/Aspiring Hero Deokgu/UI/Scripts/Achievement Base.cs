@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class AchievementBase : MonoBehaviour
 {
     [SerializeField] TMP_Text achieve_Text;
@@ -18,7 +19,18 @@ public class AchievementBase : MonoBehaviour
     int rewardGold = 0;
     bool isClear = false;
 
-    // Start is called before the first frame update
+    public AchievementData GetAchievementData()
+    {
+        return new AchievementData
+        {
+            name = gameObject.name, // 업적의 이름
+            currentValue = achieve_Value, // 현재 진행 값
+            maxValue = achieve_MaxValue, // 최대 진행 값
+            rewardGold = rewardGold, // 보상 금액
+            isCleared = isClear // 업적 달성 여부
+        };
+    }
+
     void Start()
     {
         rewardGoldUI = transform.Find("Button_Reward_Coin").gameObject;

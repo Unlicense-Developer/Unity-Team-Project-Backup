@@ -5,51 +5,39 @@ using UnityEngine;
 public class PlayerData : MonoBehaviour
 {
     [SerializeField]
-    Vector3 playerPos = new Vector3( 1.0f, 0.2f, -9.35f);
+    Vector3 playerPos = new Vector3(1.0f, 0.2f, -9.35f);
     [SerializeField]
     Quaternion playerRot = Quaternion.Euler(Vector3.zero);
 
     int goldData = 1000;
     List<Item> invenData = new List<Item>();
 
-    public static PlayerData instance = null;
+    public static PlayerData Instance { get; private set; }
 
-    public static PlayerData Instance
+    // 플레이어 상태 저장을 위한 클래스
+    public class PlayerStatusData
     {
-        get
-        {
-            if (instance == null)
-            {
-                return null;
-            }
-
-            return instance;
-        }
+        public int CurrentHealth;
+        public int BaseAttackDamage;
+        public int AdditionalAttackDamage;
+        public int BaseBreakDamage;
+        public int AdditionalBreakDamage;
+        public int Defense;
     }
 
     void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
 
             // 씬 전환되더라도 파괴되지 않게 함
             DontDestroyOnLoad(gameObject);
         }
-        else if (instance != null)
+        else if (Instance != null)
         {
             Destroy(this.gameObject);
         }
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void SavePlayerTransform(Vector3 curPos, Quaternion curRot)
@@ -97,5 +85,16 @@ public class PlayerData : MonoBehaviour
     public void SetGold(int gold)
     {
         goldData += gold;
+    }
+
+    public void SavePlayerStatus(int currentHealth, int baseAttack, int additionalAttack, int baseBreak, int additionalBreak, int defense)
+    {
+        // 여기에 플레이어 상태 저장 로직 구현
+    }
+
+    public PlayerStatusData GetPlayerStatus()
+    {
+        // 여기에 플레이어 상태 로드 로직 구현
+        return new PlayerStatusData();
     }
 }

@@ -41,6 +41,45 @@ namespace Dungeon
             UpdatePotionCount(); // 이제 UIManager가 null이 아니라고 확신할 수 있습니다.
         }
 
+        public void SaveStatus()
+        {
+            PlayerData.Instance.SavePlayerStatus(CurrentHealth, BaseAttackDamage, AdditionalAttackDamage, BaseBreakDamage, AdditionalBreakDamage, Defense);
+        }
+
+        public void LoadStatus()
+        {
+            var statusData = PlayerData.Instance.GetPlayerStatus();
+            CurrentHealth = statusData.CurrentHealth;
+            BaseAttackDamage = statusData.BaseAttackDamage;
+            AdditionalAttackDamage = statusData.AdditionalAttackDamage;
+            BaseBreakDamage = statusData.BaseBreakDamage;
+            AdditionalBreakDamage = statusData.AdditionalBreakDamage;
+            Defense = statusData.Defense;
+
+            // 필요하다면 UI 업데이트나 기타 로직 추가
+        }
+
+        public void CheckEquipment()
+        {
+            // 초기화
+            AdditionalAttackDamage = 0;
+            Defense = 0;
+
+            // 인벤토리에서 특정 아이템의 존재 여부를 확인합니다.
+            if (InventoryManager.Instance.HasItem("Sword"))
+            {
+                AdditionalAttackDamage += 10; // Sword가 있다면 추가 공격력 증가
+            }
+            if (InventoryManager.Instance.HasItem("Armor"))
+            {
+                Defense += 5; // Armor가 있다면 방어력 증가
+            }
+
+            // 최종 공격력과 무력화 계산
+            CalculateTotalAttackDamage();
+            CalculateTotalBreakDamage();
+        }
+
         // 총 공격력 계산
         public void CalculateTotalAttackDamage()
         {
