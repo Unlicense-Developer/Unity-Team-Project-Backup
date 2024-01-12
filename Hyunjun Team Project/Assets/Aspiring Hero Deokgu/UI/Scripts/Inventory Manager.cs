@@ -9,7 +9,7 @@ using WindowsInput;
 
 public class InventoryManager : MonoBehaviour
 {
-    int gold;
+    public int gold;
     GameObject select_Item;
 
     [SerializeField] private TMP_Text sellPriceText;
@@ -19,6 +19,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private TMP_Text selectItemSellPrice;
 
     [SerializeField] private Transform content;
+    [SerializeField] private GameObject inven_UI;
     [SerializeField] private GameObject selectItemInfoImage;
     [SerializeField] private GameObject select_Frame;
     [SerializeField] private GameObject invenSlotPrefab;
@@ -41,16 +42,8 @@ public class InventoryManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-        //inven = PlayerData.Instance.GetInvenData();
-        //gold = PlayerData.Instance.GetGold();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
     }
 
-    // Update is called once per frame
     void Update()
     {
         goldText.text = gold.ToString();
@@ -61,17 +54,9 @@ public class InventoryManager : MonoBehaviour
 
     private void OnEnable()
     {
-        inven = PlayerData.Instance.GetInvenData();
-        gold = PlayerData.Instance.GetGold();
-
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        LoadData();
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        PlayerData.Instance.SaveInvenData(inven);
-        PlayerData.Instance.SaveGold(gold);
-    }
 
     public void AddItem(string item)
     {
@@ -86,6 +71,11 @@ public class InventoryManager : MonoBehaviour
     public void RemoveItem(string item)
     {
         inven.Remove(ItemDataManager.Instance.GetItem(item));
+    }
+
+    public void ActivateUI()
+    {
+        inven_UI.SetActive(true);
     }
 
     public int GetGold()
@@ -218,5 +208,17 @@ public class InventoryManager : MonoBehaviour
             selectItemInfoText.text = GetSelectItem().itemInfo;
             selectItemSellPrice.text = "상점판매가 : " + (GetSelectItem().value / 2).ToString() + "골드";
         }
+    }
+
+    public void SaveData()
+    {
+        PlayerData.Instance.SaveInvenData(inven);
+        PlayerData.Instance.SaveGold(gold);
+    }
+
+    public void LoadData()
+    {
+        inven = PlayerData.Instance.GetInvenData();
+        gold = PlayerData.Instance.GetGold();
     }
 }

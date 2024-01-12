@@ -9,7 +9,7 @@ public class PlayerData : MonoBehaviour
     [SerializeField]
     Quaternion playerRot = Quaternion.Euler(Vector3.zero);
 
-    int goldData = 1000;
+    public int goldData = 1000;
     List<Item> invenData = new List<Item>();
 
     public static PlayerData Instance { get; private set; }
@@ -82,9 +82,14 @@ public class PlayerData : MonoBehaviour
         invenData.Remove(ItemDataManager.Instance.GetItem(itemName));
     }
 
-    public void SetGold(int gold)
+    public void AddGold(int gold)
     {
         goldData += gold;
+    }
+
+    public void SetGold(int gold)
+    {
+        goldData = gold;
     }
 
     public void SavePlayerStatus(int currentHealth, int baseAttack, int additionalAttack, int baseBreak, int additionalBreak, int defense)

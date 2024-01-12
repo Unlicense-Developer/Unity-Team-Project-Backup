@@ -36,7 +36,8 @@ public class WorldDataManager : MonoBehaviour
         SaveData data = SaveSystem.LoadGame();
         if (data != null)
         {
-            SceneManager.LoadScene(data.currentScene);
+            //SceneManager.LoadScene(data.currentScene);
+            LoadingSceneManager.Instance.StartLoadScene(data.currentScene);
 
             // "Player" 태그를 가진 오브젝트를 찾아서 위치와 회전 정보 로드
             var playerObject = GameObject.FindGameObjectWithTag("Player");

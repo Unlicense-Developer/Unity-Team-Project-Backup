@@ -50,7 +50,6 @@ public class DefenceGameManager : MonoBehaviour
 
     void OnDestroy()
     {
-        Time.timeScale = 1.0f;
     }
 
     public bool IsPlaying()
@@ -89,7 +88,7 @@ public class DefenceGameManager : MonoBehaviour
 
     void CheckGameOver()
     {
-        if (life <= 0)
+        if (life <= 0 && isPlaying)
         {
             isPlaying = false;
             Cursor.lockState = CursorLockMode.None;
@@ -102,7 +101,8 @@ public class DefenceGameManager : MonoBehaviour
 
     public void ReturnWorldScene()
     {
-        PlayerData.Instance.SetGold((int)(score * 0.5f));
+        Time.timeScale = 1.0f;
+        PlayerData.Instance.AddGold((int)(score * 0.5f));
         LoadingSceneManager.Instance.StartLoadScene("WorldMap");
     }
 }
