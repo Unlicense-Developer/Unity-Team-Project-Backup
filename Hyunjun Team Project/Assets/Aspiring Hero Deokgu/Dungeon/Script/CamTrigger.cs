@@ -9,7 +9,7 @@ public class CamTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("캠트리거 충돌");
-            //ClosestVirtualCamera.instance.CamControl();
+            EventCameraController.Instacne.ActiveEventRoomCamera();
         }
     }
 }

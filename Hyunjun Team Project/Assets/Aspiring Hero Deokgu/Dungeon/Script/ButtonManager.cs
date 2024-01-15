@@ -10,7 +10,7 @@ public class ButtonManager : MonoBehaviour
     public void ButtonActivated()
     {
         activeButtons++;
-        DungeonSoundManager.Instance.PlaySFX("Button");
+        WorldSoundManager.Instance.PlaySFX("Rune");
 
         Debug.Log(activeButtons);
 

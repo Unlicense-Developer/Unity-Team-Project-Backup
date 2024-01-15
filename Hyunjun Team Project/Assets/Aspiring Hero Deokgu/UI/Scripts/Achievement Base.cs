@@ -75,7 +75,10 @@ public class AchievementBase : MonoBehaviour
 
     public void SetAchieveValue(int value)
     {
-        achieve_Value = value;
+        if (isClear)
+            return;
+
+        achieve_Value += value;
         UpdateAchievement();
 
         if (achieve_Value == achieve_MaxValue)

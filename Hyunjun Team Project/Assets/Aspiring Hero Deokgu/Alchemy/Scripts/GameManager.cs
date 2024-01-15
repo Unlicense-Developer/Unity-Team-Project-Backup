@@ -230,6 +230,7 @@ namespace Alchemy
         {
             SfxPlay(Sfx.Button); // 버튼 클릭 사운드 효과 재생
             StartCoroutine(ResetCoroutine()); // 재시작 코루틴 시작
+            AchievementManager.Instance.SetAchieveValue("Alchemy", 1);
         }
 
         // 게임 재시작 코루틴

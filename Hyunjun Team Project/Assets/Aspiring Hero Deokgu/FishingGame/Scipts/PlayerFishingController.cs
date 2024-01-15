@@ -2,31 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using DG.Tweening;
 
 public class PlayerFishingController : MonoBehaviour
 {
     PlayerController.ThirdPersonController Controller;
     Animator anim; // 애니메이터
 
+    public TextMeshProUGUI Alarm;   //물고기가 미끼를 물면 발동되는 텍스트
+
     private bool canFishA; // 낚시 가능 여부 판단을 위한 변수
     private bool canFishB;
 
     public int FishingResult;
     public float timerToCatch; // 낚시 시간
-    public float timeBeforeBite; // 물고기 물어듦 시간
+    public float timeBeforeBite; // 물고기가 미끼를 물기까지의 시간
     public bool isFishing; // 플레이어가 낚시 중 인지 판단을 위한 변수
 
-    bool functionTriggered = false; //낚시 애니메이션 동작의 실행 및 재실행을 위한 변수
+    private bool functionTriggered = false; //낚시 애니메이션 실행 및 재실행을 위한 변수
 
     public GameObject fishingZone_1; // 낚시 지점1
     public GameObject fishingZone_2; // 낚시 지점2
 
     public GameObject fishingPole; // 낚싯대 게임 오브젝트
 
+    public Text Fish1;
+    public Text Fish2;
+    public Text Fish3;
+    public Text Fish4;
+    public Text Fail;
+
     public bool isFishingActive = true; //낚시실행 및 재실행을 위한 변수
 
     //연타형 QTE 관련 변수
-    public int requiredPresses = 30; // 필요한 연타 횟수
+    public int requiredPresses; // 필요한 연타 횟수
     public Slider HitqteSlider; // 연타 슬라이더
     public GameObject qtePanel; // QTE 패널
     private int currentPresses = 0; // 현재까지의 연타 횟수
@@ -57,7 +67,7 @@ public class PlayerFishingController : MonoBehaviour
     [SerializeField] float hookPower = 5f;          //hookArea의 상승을 위한 hookPullVelocity에 관련된 변수
     private float hookProgress;
     [SerializeField] float hookPullVelocity;
-    [SerializeField] float hookPullPower = 0.01f;   //hookArea의 상승을 위한 변수
+    [SerializeField] float hookPullPower = 0.01f;       //hookArea의 상승을 위한 변수
     [SerializeField] float hookGravityPower = 0.005f;   //hookArea의 하강을 위한 변수
     [SerializeField] float hookProgressDegradationPower = 0.1f; //미니게임 성공률 게이지 상승 관련 변수
 
@@ -68,24 +78,29 @@ public class PlayerFishingController : MonoBehaviour
     //낚시지역 판별을 위한 변수
     private string zonTag = "";
 
-    private bool isPlayingSound = false;
 
-    void Start()
+    private void Start()
     {
         //player = GetComponent<Rigidbody>(); // 리지드바디 컴포넌트 할당
         anim = GetComponent<Animator>(); // 애니메이터 컴포넌트 할당.
         Controller = GetComponent<PlayerController.ThirdPersonController>();
 
         fishingPole.SetActive(false); // 낚싯대 비활성화
+
+        Fish1.color = new Color(Fish1.color.r, Fish1.color.g, Fish1.color.b, 0f);
+        Fish2.color = new Color(Fish2.color.r, Fish2.color.g, Fish2.color.b, 0f);
+        Fish3.color = new Color(Fish3.color.r, Fish3.color.g, Fish3.color.b, 0f);
+        Fish4.color = new Color(Fish4.color.r, Fish4.color.g, Fish4.color.b, 0f);
+        Fail.color = new Color(Fail.color.r, Fail.color.g, Fail.color.b, 0f);
     }
 
-    void LateUpdate()
+    private void LateUpdate()
     {
         fishTimer -= Time.deltaTime;
         timerToCatch += Time.deltaTime;
 
         // 키를 누르면 낚시 시도
-        if (!functionTriggered && Input.GetKeyDown(KeyCode.K))
+        if (!functionTriggered && Input.GetKeyDown(KeyCode.G))
         {
             functionTriggered = true;   //동작실행
             FishCheck();
@@ -98,6 +113,7 @@ public class PlayerFishingController : MonoBehaviour
             Debug.Log("움직여서 낚시가 취소되었습니다.");
             isFishing = false;
             fishingPole.SetActive(false);
+            anim.SetBool("IsFishing", false);
         }
 
         // 정해지는 시간이 지나면 물고기가 미끼를 물음
@@ -108,11 +124,6 @@ public class PlayerFishingController : MonoBehaviour
             if(!isFishingActive)
                 isFishingActive = true;
         }
-
-        else
-        {
-            isPlayingSound = false;
-        }
     }
 
     IEnumerator CastSound()
@@ -121,19 +132,19 @@ public class PlayerFishingController : MonoBehaviour
         WorldSoundManager.Instance.PlaySFX("Cast");
     }
 
-
-    void DisableFishingPole()
+    private void DisableFishingPole()
     {
         fishingPole.SetActive(false);
     }
 
-    void FishCheck()
+    private void FishCheck()
     {
         canFishA = fishingZone_1.GetComponent<FishingZone_>().PlayerCanFish(); //낚시가 가능한지 체크
         canFishB = fishingZone_2.GetComponent<FishingZone_>().PlayerCanFish();
 
         if (canFishA || canFishB)
         {
+            anim.SetBool("IsFishing", true);
             fishingPole.SetActive(true);
             Fish(); // 낚시 시작
             Debug.Log("낚시 중입니다!");
@@ -145,9 +156,9 @@ public class PlayerFishingController : MonoBehaviour
         }
     }
 
-    void Fish()
+    private void Fish()
     {
-        FishingResult = Random.Range(1, 3);
+        FishingResult = Random.Range(1,6);
         Debug.Log(FishingResult);
         timerToCatch = 0f;
         timeBeforeBite = 0f;
@@ -159,11 +170,10 @@ public class PlayerFishingController : MonoBehaviour
         //낚시동작을 실행
         Debug.Log(timeBeforeBite);
         isFishing = true;
-        anim.SetBool("IsFishing", true);
         StartCoroutine(CastSound());
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("zone1"))
         {
@@ -173,11 +183,11 @@ public class PlayerFishingController : MonoBehaviour
         else if (other.CompareTag("zone2"))
         {
             zonTag = other.gameObject.tag;
-            // FishingZoneEntered("zone2");
+            //FishingZoneEntered("zone2");
         }
     }
 
-    void FishingZoneEntered(string zoneTag)
+    private void FishingZoneEntered(string zoneTag)
     {
         if (zoneTag == "zone1")
         {
@@ -189,22 +199,24 @@ public class PlayerFishingController : MonoBehaviour
         }
     }
 
-    void HitQTE()
+    private void HitQTE()
     {
+        AnimateText();
         anim.SetBool("ReelIn", true);  //릴을 감는 애니메이션을 동작
 
         qtePanel.SetActive(true);   //QTE페널 활성화
         HitqteSlider.gameObject.SetActive(true);    //QTE슬라이더 활성화
 
-        if (isFishingActive)
+        Controller.enabled = false;
+
+        if (isFishingActive && !Controller._isMoving)
         {
-            // J 키를 눌렀을 때 QTE의 성공도를 상승
-            if (Input.GetKeyDown(KeyCode.J))
+            // 마우스를 연타했을 때 QTE의 성공도를 상승
+            if (Input.GetMouseButtonDown(0))
             {
                 anim.SetBool("ReelIn", true);
                 currentPresses++;
                 HitqteSlider.value = (float)currentPresses / requiredPresses; // 연타 횟수에 비례하여 슬라이더 값 조절
-                //print("c : " + currentPresses + " r : " + requiredPresses);
                 // 필요한 연타 횟수에 도달하면 성공
                 if (currentPresses >= requiredPresses)
                 {
@@ -215,16 +227,17 @@ public class PlayerFishingController : MonoBehaviour
                     ResetHitQTE(); // QTE 초기화
                     Debug.Log("물고기를 잡았습니다!");
                     isFishing = false;
-                    anim.SetBool("IsFishing", false);
                     Invoke("DisableFishingPole", 2.0f);
 
-                    if (FishingResult <= 1)
+                    if (FishingResult == 1 || FishingResult == 3 || FishingResult == 5)
                     {
                         InventoryManager.Instance.AddItem("Bass");
+                        ResultText();
                     }
                     else
                     {
                         InventoryManager.Instance.AddItem("Trout");
+                        ResultText();
                     }
                 }
             }
@@ -238,7 +251,6 @@ public class PlayerFishingController : MonoBehaviour
                 ResetHitQTE(); // 시간 초과 시 QTE 초기화
                 hideHitQTEPanel();
                 hideSlider();
-                anim.SetBool("IsFishing", false);
                 anim.SetBool("ReelIn", false);
                 anim.SetInteger("Catch", 1);
                 isFishing = false;
@@ -247,20 +259,20 @@ public class PlayerFishingController : MonoBehaviour
         }
     }
 
-    void hideHitQTEPanel()
+    private void hideHitQTEPanel()
     {
         // QTE 패널 비활성화 및 1초 후에 슬라이더 숨김
         qtePanel.SetActive(false);
         Invoke("hideSlider", 1.0f);
     }
 
-    void hideSlider()
+    private void hideSlider()
     {
         // 슬라이더 숨기기
         HitqteSlider.gameObject.SetActive(false);
     }
 
-    void ResetHitQTE()
+    private void ResetHitQTE()
     {
         // QTE에 입력된 값을 초기화하고 다음 도전을 준비
         HitqteSlider.value = 0;
@@ -268,14 +280,17 @@ public class PlayerFishingController : MonoBehaviour
         qteTimer = 10.0f;
         timerToCatch = 0;
         isFishingActive = false; // QTE 비활성화
+        anim.SetBool("IsFishing", false);
+        Controller.enabled = true;
     }
 
-    void pullingQTE()   //낚시 미니게임에 관련된 함수
+    private void pullingQTE()   //낚시 미니게임에 관련된 함수
     {
-
         anim.SetBool("ReelIn", true);
+        AnimateText();
+        Controller.enabled = false;
 
-        if (isFishingActive)
+        if (isFishingActive && !Controller._isMoving)
         {
             MinigamePanel.SetActive(true);
             fishing();
@@ -284,7 +299,7 @@ public class PlayerFishingController : MonoBehaviour
         }
     }
 
-    void fishing()
+    private void fishing()
     {   //미니게임에서 물고기가 랜덤한 위치로 움직이게 하기위한 함수
         if (fishTimer < 0f)
         {
@@ -296,7 +311,7 @@ public class PlayerFishingController : MonoBehaviour
         fish.position = Vector3.Lerp(bottomPivot.position, topPivot.position, fishPosition);
     }
 
-    void Hook()
+    private void Hook()
     {   //미니게임에서 훅의 움직임을 위한 함수 (훅의 속도와 움직이는 위치를 제한함)
         if (Input.GetMouseButton(0))
         {
@@ -310,7 +325,7 @@ public class PlayerFishingController : MonoBehaviour
         hook.position = Vector3.Lerp(bottomPivot.position, topPivot.position, hookPosition);
     }
 
-    void ProgressCheck()
+    private void ProgressCheck()
     {   //미니게임의 성공도를 상승,하강시키기 위한 함수
         Vector3 Is = progressBarContainer.localScale;
         Is.y = hookProgress;
@@ -342,7 +357,7 @@ public class PlayerFishingController : MonoBehaviour
         hookProgress = Mathf.Clamp(hookProgress, 0f, 1f);
     }
 
-    void Catch()
+    private void Catch()
     {
         StartCoroutine(SuccessSound());
         anim.SetBool("ReelIn", false); ;
@@ -353,17 +368,19 @@ public class PlayerFishingController : MonoBehaviour
         isFishing = false;
         Invoke("DisableFishingPole", 2.0f);
 
-        if (FishingResult <= 1)
+        if (FishingResult == 1 || FishingResult == 2 || FishingResult == 3 || FishingResult == 4)
         {
             InventoryManager.Instance.AddItem("Salmon");
+            ResultText();
         }
         else
         {
             InventoryManager.Instance.AddItem("Tuna");
+            AchievementManager.Instance.SetAchieveValue("Fishing", 1);
+            ResultText();
         }
     }
-
-    void LoseFish()
+    private void LoseFish()
     {
         anim.SetBool("ReelIn", false); ;
         anim.SetInteger("Catch", 1);
@@ -374,10 +391,10 @@ public class PlayerFishingController : MonoBehaviour
         isFishing = false;
         Invoke("DisableFishingPole", 2.0f);
     }
-
-    void ResetMinigame()
+    private void ResetMinigame()
     {
         //미니게임 입력된 값 초기화
+        failTimer = 10.0f;
         fishPosition = 0.1f;
         hookPullVelocity = 0f;
         hookProgress = 0;
@@ -385,9 +402,10 @@ public class PlayerFishingController : MonoBehaviour
         timerToCatch = 0;
         anim.SetBool("IsFishing", false);
         isFishingActive = false;
+        Controller.enabled = true;
     }
 
-    void hideMinigame()
+    private void hideMinigame()
     {
         //미니게임 페널 숨김
         MinigamePanel.SetActive(false);
@@ -407,9 +425,101 @@ public class PlayerFishingController : MonoBehaviour
         WorldSoundManager.Instance.PlaySFX("Fail");
     }
 
-    void PlayReelIn()
+    public void RandomFishing()
     {
-        WorldSoundManager.Instance.PlaySFX("ReelIn");
+        requiredPresses = Random.Range(15, 26);
     }
 
+    public void PlayReelIn()
+    {
+        WorldSoundManager.Instance.PlaySFX("ReelIn");
+        Controller.enabled = false;
+    }
+
+    private void AnimateText()
+    {
+        Alarm.gameObject.SetActive(true);
+        Vector3 initialPosition = Alarm.transform.position;
+
+        Alarm.transform.DOMove(new Vector3(initialPosition.x + 10f, initialPosition.y + 10f, initialPosition.z), 0.5f)
+            .SetEase(Ease.OutQuad)
+            .OnComplete(() =>
+            {
+                Alarm.DOFade(0f, 0.5f).SetDelay(0.1f).OnComplete(() =>
+                {
+                    Alarm.gameObject.SetActive(false);
+                });
+            });
+    }
+
+    private void ResultText()
+    {
+        if (canFishA && FishingResult == 1 || FishingResult == 3 || FishingResult == 5)
+        {
+            Fish1.DOFade(1f, 0.3f).SetEase(Ease.OutQuad).OnComplete(() =>
+            {
+                // 3초 후에 텍스트가 서서히 사라지는 애니메이션
+                DOVirtual.DelayedCall(3f, () =>
+                {
+                    Fish1.DOFade(0f, 1f).SetEase(Ease.OutQuad).OnComplete(() =>
+                    {
+                    });
+                });
+            });
+        }
+
+        else if (canFishA && FishingResult == 2 || FishingResult == 4)
+        {
+            Fish2.DOFade(1f, 0.3f).SetEase(Ease.OutQuad).OnComplete(() =>
+            {
+                DOVirtual.DelayedCall(3f, () =>
+                {
+                    Fish2.DOFade(0f, 1f).SetEase(Ease.OutQuad).OnComplete(() =>
+                    {
+                    });
+                });
+            });
+        }
+
+        else if (canFishB && FishingResult == 1 || FishingResult == 2 || FishingResult == 3 || FishingResult == 4)
+        {
+            Fish3.DOFade(1f, 0.3f).SetEase(Ease.OutQuad).OnComplete(() =>
+            {
+                DOVirtual.DelayedCall(3f, () =>
+                {
+                    Fish3.DOFade(0f, 1f).SetEase(Ease.OutQuad).OnComplete(() =>
+                    {
+                    });
+                });
+            });
+        }
+
+        else if (canFishB && FishingResult == 5)
+        {
+            Fish4.DOFade(1f, 0.3f).SetEase(Ease.OutQuad).OnComplete(() =>
+            {
+                // 3초 후에 텍스트가 서서히 사라지는 애니메이션
+                DOVirtual.DelayedCall(3f, () =>
+                {
+                    Fish4.DOFade(0f, 1f).SetEase(Ease.OutQuad).OnComplete(() =>
+                    {
+                    });
+                });
+            });
+        }
+
+        else
+        {
+            Fail.DOFade(1f, 0.3f).SetEase(Ease.OutQuad).OnComplete(() =>
+            {
+                // 3초 후에 텍스트가 서서히 사라지는 애니메이션
+                DOVirtual.DelayedCall(3f, () =>
+                {
+                    Fail.DOFade(0f, 1f).SetEase(Ease.OutQuad).OnComplete(() =>
+                    {
+                    });
+                });
+            });
+        }
+    }
 }

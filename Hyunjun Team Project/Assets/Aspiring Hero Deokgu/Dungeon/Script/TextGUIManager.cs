@@ -20,7 +20,8 @@ public class TextGUIManager : MonoBehaviour
         if (Instance == null) Instance = this;
 
         Event1Text.color = new Color(Event1Text.color.r, Event1Text.color.g, Event1Text.color.b, 0f);
-
+        Event2Text.color = new Color(Event2Text.color.r, Event2Text.color.g, Event2Text.color.b, 0f);
+        FallText.color = new Color(FallText.color.r, FallText.color.g, FallText.color.b, 0f);
     }
 
     public void EventCameraTextA()

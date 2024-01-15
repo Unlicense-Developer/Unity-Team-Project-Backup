@@ -21,6 +21,7 @@ public class PentagramGate : MonoBehaviour
     {
         initialPosition = transform.position;
         targetPosition = initialPosition + Vector3.up * openHeight; // 열린 위치 설정
+        dust = GameObject.FindGameObjectWithTag("FX1");
         dust.SetActive(false);
     }
 
@@ -54,10 +55,8 @@ public class PentagramGate : MonoBehaviour
     IEnumerator SFX()
     {
         yield return new WaitForSeconds(0.5f);
-        DungeonSoundManager.Instance.PlaySFX("GateOpenSound");
+        WorldSoundManager.Instance.PlaySFX("GateOpenSound");
     }
-
-
 
     private void GateMoveUp()
     {

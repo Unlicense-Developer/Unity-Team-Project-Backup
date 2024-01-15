@@ -20,7 +20,7 @@ public class BossActive : MonoBehaviour
     {
         sitBoss.SetActive(true);
         stendBoss.SetActive(false);
-        //ActiveEffect.SetActive(false);
+        ActiveEffect.SetActive(false);
     }
 
     public void DeviceActivated()
@@ -49,6 +49,7 @@ public class BossActive : MonoBehaviour
         ActiveEffect.SetActive(true);
 
         yield return new WaitForSeconds(10f);
+        WorldSoundManager.Instance.PlaySFX("Summon");
 
         ActiveEffect.SetActive(false);
     }

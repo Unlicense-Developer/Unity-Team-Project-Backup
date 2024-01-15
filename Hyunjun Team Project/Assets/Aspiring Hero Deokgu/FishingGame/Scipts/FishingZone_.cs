@@ -9,16 +9,11 @@ public enum FishingZoneType
 
 public class FishingZone_ : MonoBehaviour
 {
-    PlayerController.ThirdPersonController controller;
 
     public Collider zone1;
     public Collider zone2;
     public bool fishMode = false;
 
-    /*
-    public GameObject fishingZone_1; // 낚시 지점1
-    public GameObject fishingZone_2; // 낚시 지점2
-    */
 
     public Collider GetCollider(FishingZoneType ZoneType)
     {
@@ -43,6 +38,15 @@ public class FishingZone_ : MonoBehaviour
             Debug.Log("낚시 지역에 진입했습니다."); // 디버그 로그: 플레이어가 낚시 지역에 진입함
             playerCanFish = true;
             fishMode = true;
+
+            if (this.gameObject.tag == "zone1")
+            {
+                FishingText.Instance.TutoA();
+            }
+            else if (this.gameObject.tag == "zone2")
+            {
+                FishingText.Instance.TutoB();
+            }
         }
     }
 
@@ -60,25 +64,4 @@ public class FishingZone_ : MonoBehaviour
     {
         return playerCanFish;
     }
-
-    /*
-    public bool PlayerCanFish
-    {
-        get
-        {
-            return playerCanFish;
-        }
-    }
-    */
-
-    //public string PlayerCanFish
-    //{
-    //    get
-    //    {
-    //          if(playerCanFish)
-    //              return "zone1";
-    //          else
-    //              return "zone2";
-    //    }
-    //}
 }

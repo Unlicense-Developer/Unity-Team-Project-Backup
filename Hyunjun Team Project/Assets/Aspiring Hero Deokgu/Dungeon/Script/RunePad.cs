@@ -18,7 +18,7 @@ public class RunePad : MonoBehaviour
             isActivated = true;
             transform.DOMoveY(this.transform.position.y - 0.5f, 3f);
 
-            DungeonSoundManager.Instance.PlaySFX("Pad");
+            WorldSoundManager.Instance.PlaySFX("Pad");
 
             gateController.DeviceTriggered();
         }

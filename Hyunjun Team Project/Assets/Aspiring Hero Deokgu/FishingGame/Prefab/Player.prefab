@@ -3192,7 +3192,6 @@ GameObject:
   - component: {fileID: 535928528163143203}
   - component: {fileID: 4039755525113482647}
   - component: {fileID: 6729324235385968899}
-  - component: {fileID: 6472337072408875866}
   - component: {fileID: 4653589588791187333}
   m_Layer: 8
   m_Name: Player
@@ -3341,6 +3340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd500bc55638dd409dd0b1e81aab1a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Alarm: {fileID: 0}
   FishingResult: 0
   timerToCatch: 0
   timeBeforeBite: 0
@@ -3348,6 +3348,11 @@ MonoBehaviour:
   fishingZone_1: {fileID: 0}
   fishingZone_2: {fileID: 0}
   fishingPole: {fileID: 7610724374425849175}
+  Fish1: {fileID: 0}
+  Fish2: {fileID: 0}
+  Fish3: {fileID: 0}
+  Fish4: {fileID: 0}
+  Fail: {fileID: 0}
   isFishingActive: 1
   requiredPresses: 30
   HitqteSlider: {fileID: 0}
@@ -3531,28 +3536,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &6472337072408875866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4982454434388736538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14219d5a24792d4a902a088c37f7b62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgmPlayer: {fileID: 0}
-  sfxPlayer:
-  - {fileID: 0}
-  - {fileID: 0}
-  sfxClip:
-  - {fileID: 8300000, guid: ec19250cb535aa146bb2454d5e4bc5a3, type: 3}
-  - {fileID: 8300000, guid: 87af252bd4bd10142b7ca53b448f40b1, type: 3}
-  - {fileID: 8300000, guid: d02469bc69e309d43a30adf522714b6b, type: 3}
-  - {fileID: 8300000, guid: 9f37870448815284f9cfc15ea3fa8f73, type: 3}
-  - {fileID: 8300000, guid: c5c5224ddb2b2954faf3f3adf33deff7, type: 3}
 --- !u!114 &4653589588791187333
 MonoBehaviour:
   m_ObjectHideFlags: 0

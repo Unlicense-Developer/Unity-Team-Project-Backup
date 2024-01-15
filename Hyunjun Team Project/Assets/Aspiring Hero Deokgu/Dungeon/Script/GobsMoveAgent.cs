@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Dungeon;
 
 public class GobsMoveAgent : MonoBehaviour
 {
@@ -10,10 +11,13 @@ public class GobsMoveAgent : MonoBehaviour
 
     NavMeshAgent nav;
     Transform tr;
+    Animator anim;
     readonly float patrolSpeed = 0.5f;
     readonly float chaseSpeed = 1.2f;
-    float damping = 1f;     //회전할때 속도 변수(계수)
-    bool isPatrol;
+    private float damping = 1f;     //회전할때 속도 변수(계수)
+    private bool isPatrol;
+
+    public PlayerStatus player;
 
     public bool IsPatrol
     {
@@ -50,8 +54,14 @@ public class GobsMoveAgent : MonoBehaviour
         get { return nav.velocity.magnitude; }
     }
 
+    private void Awake()
+    {
+        player = FindObjectOfType<PlayerStatus>();
+    }
+
     void Start()
     {
+        anim = GetComponent<Animator>();
         tr = GetComponent<Transform>();
         nav = GetComponent<NavMeshAgent>();
         nav.autoBraking = false;
@@ -101,6 +111,24 @@ public class GobsMoveAgent : MonoBehaviour
         IsPatrol = false;
         nav.isStopped = true;
         nav.velocity = Vector3.zero;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            player.ReceiveDamage(10);
+
+            StartCoroutine(GobDead());
+        }
+    }
+
+    IEnumerator GobDead()
+    {
+        anim.SetTrigger("IsDead");
+        anim.SetBool("IsMove", false);
+        yield return new WaitForSeconds(2f);
+        this.gameObject.SetActive(false);
     }
 
 

@@ -2,12 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Dungeon;
+
 
 public class SpearTrap : MonoBehaviour
 {
     public float moveDistance = 2f;
     public float moveDuration = 0.2f;
     public float delayBetweenMovements = 2f;
+
+    public PlayerStatus player;
+
+    private void Awake()
+    {
+        player = FindObjectOfType<PlayerStatus>();
+    }
 
     void Start()
     {
@@ -18,7 +27,7 @@ public class SpearTrap : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-
+            player.ReceiveDamage(10);
         }
     }
 
@@ -39,5 +48,10 @@ public class SpearTrap : MonoBehaviour
                     .SetEase(Ease.Linear);
             }
         }
+    }
+
+    void playerDamage(int damageAmount)
+    {
+        
     }
 }

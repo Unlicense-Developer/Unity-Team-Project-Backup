@@ -84,8 +84,11 @@ public class EnemyBase : MonoBehaviour
 
     public void PlayDead()
     {
-        sound.PlayDeathSound();
+        if( gameObject.tag == "Orc")
+            AchievementManager.Instance.SetAchieveValue("Defence", 1);
+
         DefenceGameManager.Instance.AddScore(killScore);
+        sound.PlayDeathSound();
         StartCoroutine(DeleteAfterSeconds());
     }
 

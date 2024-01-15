@@ -15,4 +15,12 @@ public class fallGuys : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.transform.position = StartPoint.transform.position;
+            TextGUIManager.Instance.FallInDarkText();
+        }
+    }
 }
