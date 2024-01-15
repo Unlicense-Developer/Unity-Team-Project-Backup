@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WorldSoundManager : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class WorldSoundManager : MonoBehaviour
     {
         // 게임 시작 시 기본 BGM 재생
         PlayBGM("WorldMap");
+        SceneManager.sceneLoaded += PlayBGMOnSceneLoaded;
     }
 
     // 사운드 딕셔너리 초기화
@@ -115,5 +117,16 @@ public class WorldSoundManager : MonoBehaviour
     {
         isBattleMode = false;
         PlayBGM("Dungeon");
+    }
+
+    public void SetBGMVolume(float value)
+    {
+        bgmSource.volume = value;
+    }
+
+    void PlayBGMOnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if( scene.name == "WorldMap")
+            PlayBGM("WorldMap");
     }
 }

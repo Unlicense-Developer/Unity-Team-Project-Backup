@@ -33,6 +33,7 @@ public class SpawnManager: MonoBehaviour
 
     public void StartSpawn()
     {
+        VeganNinjaManager.Instance.SetPlaying(true);
         spawnSound.Play();
         WorldSoundManager.Instance.StopBGM();
         StartCoroutine(Spawn());

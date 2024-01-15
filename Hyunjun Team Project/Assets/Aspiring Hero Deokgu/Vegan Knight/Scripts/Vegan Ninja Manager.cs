@@ -69,6 +69,11 @@ public class VeganNinjaManager : MonoBehaviour
         score = 0;
     }
 
+    public void SetPlaying(bool play)
+    {
+        isPlaying = play;
+    }
+
     public bool IsPlaying()
     {
         return isPlaying;
@@ -123,6 +128,7 @@ public class VeganNinjaManager : MonoBehaviour
     {
         blade.enabled = false;
         spawnManager.enabled = false;
+        isPlaying = false;
 
         StartCoroutine(ExplodeSequence());
     }

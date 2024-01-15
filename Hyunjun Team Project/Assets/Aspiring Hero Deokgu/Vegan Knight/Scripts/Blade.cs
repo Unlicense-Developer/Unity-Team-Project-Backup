@@ -35,11 +35,17 @@ public class Blade : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)) {
+        if (!VeganNinjaManager.Instance.IsPlaying())
+            return;
+
+        if (Input.GetMouseButtonDown(0)) 
+        {
             StartSlice();
-        } else if (Input.GetMouseButtonUp(0)) {
+        } else if (Input.GetMouseButtonUp(0)) 
+        {
             StopSlice();
-        } else if (slicing) {
+        } else if (slicing) 
+        {
             ContinueSlice();
         }
     }

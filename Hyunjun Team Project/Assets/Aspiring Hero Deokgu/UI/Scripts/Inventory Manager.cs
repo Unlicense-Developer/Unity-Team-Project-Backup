@@ -75,7 +75,15 @@ public class InventoryManager : MonoBehaviour
 
     public void ActivateUI()
     {
-        inven_UI.SetActive(true);
+        if (ShopManager.Instance.GetUIState().activeSelf)
+            ShopManager.Instance.GetUIState().SetActive(false);
+
+        inven_UI.SetActive(!inven_UI.activeSelf);
+    }
+
+    public GameObject GetUIState()
+    {
+        return inven_UI;
     }
 
     public int GetGold()

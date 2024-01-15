@@ -11,6 +11,8 @@ public class AchievementManager : MonoBehaviour
     [SerializeField] private AchievementBase achieve_Defence;
     [SerializeField] private AchievementBase achieve_GrillingMeat;
     [SerializeField] private AchievementBase achieve_Dungeon;
+
+    [SerializeField] private GameObject achievement_UI;
     
 
     public static AchievementManager Instance { get; private set; }
@@ -70,5 +72,10 @@ public class AchievementManager : MonoBehaviour
             achieve_Dungeon.SetAchieveValue(value);
         }
 
+    }
+
+    public void ActivateUI()
+    {
+        achievement_UI.SetActive(true);
     }
 }

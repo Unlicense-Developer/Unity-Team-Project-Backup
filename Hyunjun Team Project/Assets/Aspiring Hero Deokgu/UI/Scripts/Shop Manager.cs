@@ -8,6 +8,7 @@ public class ShopManager : MonoBehaviour
 {
     GameObject select_Shopitem;
 
+    [SerializeField] private GameObject shop_UI;
     [SerializeField] private Transform shopContent;
     [SerializeField] private GameObject select_Frame;
     [SerializeField] private GameObject shopSlotPrefab;
@@ -15,27 +16,15 @@ public class ShopManager : MonoBehaviour
     public List<Item> shopItems = new List<Item>();
 
     //ΩÃ±€≈Ê
-    public static ShopManager instance = null;
-    public static ShopManager Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                return null;
-            }
-
-            return instance;
-        }
-    }
+    public static ShopManager Instance { get; private set; }
 
     void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
-        else if (instance != null)
+        else if (Instance != null)
         {
             Destroy(this.gameObject);
         }
@@ -97,5 +86,18 @@ public class ShopManager : MonoBehaviour
         InventoryManager.Instance.AddItem(select_Shopitem);
         InventoryManager.Instance.UpdateInven();
         InventoryManager.Instance.AddGold(-GetSelectItem().value);
+    }
+
+    public void ActivateUI()
+    {
+        if (InventoryManager.Instance.GetUIState().activeSelf)
+            InventoryManager.Instance.GetUIState().SetActive(false);
+
+        shop_UI.SetActive(!shop_UI.activeSelf);
+    }
+
+    public GameObject GetUIState()
+    {
+        return shop_UI;
     }
 }

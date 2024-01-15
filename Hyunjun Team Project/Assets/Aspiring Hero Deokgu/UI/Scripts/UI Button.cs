@@ -11,5 +11,10 @@ public class UIButton : MonoBehaviour
             InventoryManager.Instance.UpdateInven();
             InventoryManager.Instance.ActivateUI();
         }
+        else if( uiType == "Achievement")
+        {
+            AchievementManager.Instance.ActivateUI();
+        }
+
     }
 }
